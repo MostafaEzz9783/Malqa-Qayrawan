@@ -4,14 +4,20 @@ import Dashboard from "@/pages/Dashboard";
 import SplashScreen from "@/components/SplashScreen";
 import { translations } from "@/i18n/translations";
 
+const LANGUAGE_STORAGE_KEY = "mathwaa_malqa_qayrawan_language";
+const LEGACY_LANGUAGE_STORAGE_KEY = "arqa_language";
+
 function App() {
-  const [language, setLanguage] = useState(() => localStorage.getItem("arqa_language") || "ar");
+  const [language, setLanguage] = useState(
+    () => localStorage.getItem(LANGUAGE_STORAGE_KEY) || localStorage.getItem(LEGACY_LANGUAGE_STORAGE_KEY) || "ar",
+  );
   const [isReady, setIsReady] = useState(false);
   const t = useMemo(() => translations[language], [language]);
   const prefersReducedMotion = useReducedMotion();
 
   useEffect(() => {
-    localStorage.setItem("arqa_language", language);
+    localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
+    localStorage.removeItem(LEGACY_LANGUAGE_STORAGE_KEY);
     document.documentElement.lang = language;
     document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
   }, [language]);

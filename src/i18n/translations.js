@@ -2,7 +2,7 @@ export const translations = {
   ar: {
     meta: {
       language: "ar",
-      browserTitle: "مثوى - الدراسة المالية",
+      browserTitle: "Mathwaa - Malqa & Qayrawan Feasibility Study",
     },
     nav: {
       languageToggle: "English",
@@ -186,7 +186,7 @@ export const translations = {
   en: {
     meta: {
       language: "en",
-      browserTitle: "Mathwaa - Financial Study",
+      browserTitle: "Mathwaa - Malqa & Qayrawan Feasibility Study",
     },
     nav: {
       languageToggle: "العربية",

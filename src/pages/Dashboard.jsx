@@ -27,6 +27,7 @@ const CashFlowTimeline = lazy(() => import("@/components/CashFlowTimeline"));
 
 const MONTH_KEYS = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
 const DEFAULT_OCCUPANCY_TARGET = 80;
+const APP_TITLE = "Mathwaa - Malqa & Qayrawan Feasibility Study";
 
 // Neither workbook tabulates monthly seasonality (that only existed in the
 // legacy Arqa "Hybrid Projection" sheet), so - same convention the old
@@ -102,9 +103,8 @@ export default function Dashboard({ t, language, onToggleLanguage }) {
   }, []);
 
   useEffect(() => {
-    document.title =
-      language === "ar" ? `مثوى - الدراسة المالية - ${project.name.ar}` : `Mathwaa - ${project.name.en} Financial Study`;
-  }, [language, project]);
+    document.title = APP_TITLE;
+  }, []);
 
   const toggleFullscreen = useCallback(async () => {
     if (!sectionRef.current) return;
