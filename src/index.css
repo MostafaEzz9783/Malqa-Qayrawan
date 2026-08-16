@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  background-color: #f7f6f3;
+}
+
+body {
+  font-family: "Inter", "Cairo", sans-serif;
+}
+
+[dir="rtl"] body {
+  font-family: "Cairo", "Inter", sans-serif;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background-color: rgba(191, 124, 74, 0.25);
+}
+
+.arqa-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #e0a876, #bf7c4a);
+  border: 2px solid #151522;
+  box-shadow: 0 2px 8px rgba(191, 124, 74, 0.5);
+  cursor: pointer;
+}
+
+.arqa-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #e0a876, #bf7c4a);
+  border: 2px solid #151522;
+  box-shadow: 0 2px 8px rgba(191, 124, 74, 0.5);
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
