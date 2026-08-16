@@ -1,9 +1,6 @@
-import { Globe, TrendingUp } from "lucide-react";
+import { Globe } from "lucide-react";
 import FloatingPanel from "@/components/ui/FloatingPanel";
 import ProjectSelector from "@/components/ProjectSelector";
-
-const MARKET_DATA_URL =
-  "https://docs.google.com/spreadsheets/d/1dhPpgWMX8m17jElABgCNcOk-qMYoRrqJvAfv_Bx-eYs/edit?usp=sharing";
 
 export default function Navbar({ t, language, selectedProject, onProjectChange, onToggleLanguage }) {
   return (
@@ -20,16 +17,6 @@ export default function Navbar({ t, language, selectedProject, onProjectChange, 
             <Globe size={13} />
             {t.nav.languageToggle}
           </button>
-          <a
-            href={MARKET_DATA_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold px-3 py-1.5 rounded-xl transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#BF7C4A]"
-            style={{ color: "#E0A876", backgroundColor: "rgba(191,124,74,0.12)" }}
-          >
-            <TrendingUp size={13} />
-            {t.nav.marketValidation}
-          </a>
         </div>
 
         {/* Same light "coin" backing treatment as the splash screen logo, scaled

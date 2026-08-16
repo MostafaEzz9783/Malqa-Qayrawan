@@ -6,7 +6,6 @@ export const translations = {
     },
     nav: {
       languageToggle: "English",
-      marketValidation: "بيانات السوق",
       brandAlt: "مثوى",
     },
     splash: {
@@ -191,7 +190,6 @@ export const translations = {
     },
     nav: {
       languageToggle: "العربية",
-      marketValidation: "Market Validation",
       brandAlt: "Mathwaa",
     },
     splash: {
